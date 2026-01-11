@@ -46,7 +46,7 @@
 ## 🌐 デモページ（GitHub Pages）
 
 👉 **実際の紹介ページはこちら**  
-https://miyayouzk.github.io/リポジトリ名/](https://miyayouzk.github.io/
+https://miyayouzk.github.io
 
 ※ HTML / CSS のみで作成した静的ページです。
 
