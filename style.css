@@ -75,18 +75,6 @@ a:hover {
   border-bottom: 1px solid #00c2ff;
 }
 
-/* ===== ファーストビュー強調 ===== */
-section:first-of-type {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  text-align: center;
-}
-
-section:first-of-type p {
-  font-size: 1.1rem;
-  color: #bbbbbb;
-}
-
 /* ===== レスポンシブ ===== */
 @media (max-width: 600px) {
   h1 {
@@ -99,5 +87,184 @@ section:first-of-type p {
 
   section {
     padding: 60px 16px;
+  }
+}
+
+
+/* ===== ファーストビュー（LP風） ===== */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  max-width: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.9)
+    ),
+    radial-gradient(circle at top, #1a1a1a, #000000);
+
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  max-width: 600px;
+}
+
+
+.profile {
+  padding: 80px 20px;
+}
+
+.profile-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.profile-text p {
+  margin-bottom: 20px;
+}
+
+.profile-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.profile-images img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.45);
+}
+
+
+.jitsurei {
+  padding: 80px 20px;
+}
+
+.jitsurei-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.jitsurei-text p {
+  margin-bottom: 20px;
+}
+
+.jitsurei-text h3 {
+  margin: 32px 0 16px;
+  font-size: 1.2rem;
+}
+
+.jitsurei-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.jitsurei-text li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+
+.jitsurei-text li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #c9a85c; /* ゴールド系アクセント */
+}
+
+.jitsurei-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.image-note {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.map {
+  padding: 80px 20px;
+}
+
+.map h2 {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.map-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Map */
+.map-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+}
+
+/* 店舗情報カード */
+.shop-info {
+  background: rgba(255,255,255,0.04);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.35);
+}
+
+.shop-info h3 {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+
+.shop-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shop-info li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrap iframe {
+    height: 300px;
   }
 }
